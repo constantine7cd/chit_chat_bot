@@ -1,0 +1,46 @@
+general_params:
+  device: -1
+  seed: null 
+  debug: False 
+
+generation_pipeline_kwargs:
+  model: microsoft/DialoGPT-medium
+  weights: weights/pytorch_model.bin
+  config: null 
+  tokenizer: null 
+
+generator_kwargs:
+  max_length: 1000
+  min_length: 5
+  do_sample: True 
+
+  early_stopping: False
+
+  num_beams: 1
+  num_beam_groups: 1
+
+  diversity_penalty: 0.
+  temperature: 1.0 
+
+  top_k: 40
+  top_p: 0.9
+
+  repetition_penalty: 1
+  length_penalty: 1
+
+  no_repeat_ngram_size: 0
+  pad_token_id: null 
+  bos_token_id: null 
+  eos_token_id: null 
+  bad_words_ids: null 
+
+  num_return_sequences: 1
+  decoder_start_token_id: null 
+  use_cache: True
+  clean_up_tokenization_spaces: True
+
+chatbot_params:
+  max_turns_history: 2
+  telegram_token: null
+  continue_after_restart: True
+  data_filename: data.pkl
